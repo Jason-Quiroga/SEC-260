@@ -1,0 +1,61 @@
+1/28/21
+
+I. Web Page
+  A. Static Web Pages are text files containing HTML
+    1. HTML --> Hyper Text Markup Language
+  B. HTML is the most basic bulding block of the Web. It describes and defines the content of the webpage.
+    1. Hypertext refers to links that connect webpages to one another
+    2. Markup means to annotate text, images, and other content for display in a web browser.
+      a. Markup includes special elements, such as <head>, <title>, <body>, etc.
+    3. Basic html always has an opening and a closing
+      a. IE. <html> </html>
+      a. <html> --> oepning tag for document
+      b. <head> --> section not displayed but contains info for the browser
+      c. <title> --> The name of the page that is printed on the tab THIS IS WHERE THE TITLE GOES
+      d. </title> --> close title
+      e. </head> close head
+      f. <body> --> Contains what is displayed in the browser
+      g. </body> close body
+      h. </html> close html, end of document
+    4. HTML is comprised of elements and tags
+      a. Begins with <html> and ends with </html>
+    5. Elements (tags) are nested one inside another: <html> <head> </head> <body> </body> </html>
+    6. Tags have attributes: <img src="logo.jpg" alt="logo"/> *Note that the close is INSIDE of the tag for image tags
+    7. HTML source code should be formatted to increase readability and facilitate debugging
+    8. HTML EXAMPLE:
+    
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>My First HTML Page</title>
+  </head>
+  <body>
+    <p>This is some text...</p>
+  </body>
+</html>
+
+  C. Simple Tags
+    1. Hyperlink Tags
+      a. <a href="httpL//www.google.com/"
+            title="Google"> Link to Google</a>
+    2. Image Tags
+      a. <img src
+    3. Text formatting tags
+      a. <strong> Bold </strong> <em> ITALIC </em>
+  D. Headings and Paragraphs
+    1. Heading Tags (h1 - h6)
+      a. <h1>Heading 1</h1>
+    2. Paragraph Tags
+      a. <p>This is my first paragraph</p>
+    3. Sections: div and span
+      a. <div style="background:blue" This is a div</div>
+  E. Using VI
+    1. Unix-based text editor
+    2. **Help sheet posted in a lab
+    3. Default editor used in most Linux installs
+    4. Two modes - look at the bottom left to see your mode:
+      a. INSERT: type "i" and you can edit the file, use arrow keys to navigate
+      b. COMMAND: Hit esc key and then ":" to enter commands
+        I. :w writes (saves) file
+        II. :wq writes and quits file
+        III. :q! quits without saving
