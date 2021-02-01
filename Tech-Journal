@@ -1,4 +1,4 @@
-1/28/21
+2/1/21
 
 I. How to Configure Firewall
 --> https://drive.google.com/file/d/1a-Kwc611NmL5LO5RuOpHpx0TWYslicZX/view
@@ -63,6 +63,12 @@ I. HTTP
       b. And in this pictures.html file, we have a link
         1. <a href="morepictures.html">More Pictures</a>
       c. Which would go to httpL//www.website.com/pictures/morepictures.html
+
+
+
+
+
+1/28/21
 
 I. Web Page
   A. Static Web Pages are text files containing HTML
@@ -131,6 +137,8 @@ HOW TO CONNECT TO THE CYBER.LOCAL SERVER:
 2. Open Chrome
 3. Enter the link "https://vcenter01.cyber.local"
 4. Navigate to your systems
+
+SKIFF100-15.CYBER.LOCAL --> Skiff PC
 
 My Network Assignment:
 WAN/24: 10.0.17.107
