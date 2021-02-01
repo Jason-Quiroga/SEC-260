@@ -27,6 +27,42 @@ III. How to join a domain through powershell
   C. Type in the command " add-computer -domainname "jason" -restart " and then type in the username and password of a Domain Administrator (for me, this was a default
   on the AD01 server, so the username was "Administrator" and the password was what I set it to when I configured it first).
   D. Your workstation will restart after implementing the domain change and you should now be a part of the domain.
+  
+
+Class Notes
+I. HTTP
+  A. TCP
+    1. In TCP, you need the IP address of the server computer and the TCP port number associated with the specific software program running on the server.
+  B. Web Resources
+    1. Static file on the web server's file system can contain anything: Text, HTML files, microsoft word files, etc.
+    2. Dynamic content resources can generate content, for example: Based on your identity, time of day, live image from camera, etc.
+  C. URI --> Can retrieve an object from a server
+  D. URL
+    1. Tells precisely where a resource is located and how to access it.
+    2. Example: http://www.joeshardware.com/specials
+      a. "http://" --> Use HTTP protocol
+      b. "www.joeshardware.com" --> Go to joeshardware.com
+      c. "/specials" --> Grab the resource called /specials
+    3. The first part of the URL is called the scheme, and it describes the protocol used to access the resource (usually the HTTP protocol)
+    4. The second part gives the server internet address (www.joeshardware.com)
+    5. The rest names a resource on the web server (/special)
+    6. Today, almost every URI is a URL
+  E. Relative Paths
+    1. Only point to a file or a file path
+      a. index.html
+      b. /graphics/image.png
+    2. When a user clicks  arelative link, the browser takes them to that location on the current site
+    3. <a href="linkhere.html">Click Me</a>
+  F. Absolute Paths
+    1. Hard coded, long form, no shortcut path to a resource
+    2. Always include the domain name of the website, including http://
+      a. http://www.mysite.com
+      b. http://www.mysite.com/graphics/image.png
+    3. If we had a site called http://www.website.com and a subfolder called pictures and inside pictures is pictures.html, the URL would be:
+      a. http://www.website.com/pictures/pictures.html
+      b. And in this pictures.html file, we have a link
+        1. <a href="morepictures.html">More Pictures</a>
+      c. Which would go to httpL//www.website.com/pictures/morepictures.html
 
 I. Web Page
   A. Static Web Pages are text files containing HTML
