@@ -59,3 +59,11 @@ I. Web Page
         I. :w writes (saves) file
         II. :wq writes and quits file
         III. :q! quits without saving
+        
+        
+        
+HOW TO CONNECT TO THE CYBER.LOCAL SERVER:
+1. Login to Remote Student VDI
+2. Open Chrome
+3. Enter the link "https://vcenter01.cyber.local"
+4. Navigate to your systems
