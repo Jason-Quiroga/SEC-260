@@ -1,3 +1,14 @@
+I. Telnet
+  A. How to connect to a server using telnet
+    1. Enter Linux server (webserver)
+    2. Use the command "telnet [ipaddress] 80" to connect (telnet 192.168.1.41 80)
+    3. It will bring up a blank command prompt thing
+    4. Type in the command "GET [location] HTTP/1.1", and then press etner and 
+       in the next line type "Host: [ipaddress]", then press enter twice
+       I. For example, I did "GET /index.html HTTP/1.1", then "Host: 192.168.1.41", then enter twice and it brought up the HTML code for my page.
+II. 
+
+
 Class Notes
 I. HTTP
   A. TCP
