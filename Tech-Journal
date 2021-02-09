@@ -105,5 +105,7 @@ HOW TO CONNECT TO THE CYBER.LOCAL SERVER:
 
 SKIFF100-15.CYBER.LOCAL --> Skiff PC
 
+***Use the command "dhclient" to make your server run properly again.
+
 My Network Assignment:
 WAN/24: 10.0.17.107
