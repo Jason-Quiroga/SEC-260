@@ -1,3 +1,54 @@
+2/20/21
+
+I. Creating a CA
+***Make sure openssl is downloaded on both servers
+  A. File system prep
+    1. "cd /etc/pki/CA" --> Navigate to the /etc/pki/CA directory in the server
+    2. "touch index.txt" --> Creates the file "index.txt" and makes it include time stamps when editted.
+    3. "echo 1000 > serial" --> Used to assign serial numbers to certifications
+  B. Creating your CA's private key
+    1. "openssl genrsa -des3 -out private/cakey.pem 2048"
+      a. openssl --> Uses commands from openssl
+      b. genrsa --> Generates an RSA private key
+      c. -des3 --> Encrypt using triple DES encryption
+      d. -out private/cakey.pem --> Specifies the file to write the key to
+      e. 2048 --> What key encryption to use
+     2. Record what pass phrase you use (mine was "passphrase")
+  C. Create your CA
+    1. "openssl req -new -x509 -days 365 -key private/cakey.pem -out cacert.pem"
+      a. openssl --> Use openssl commands
+      b. req --> Request a new certificate
+      c. -new --> a new one...
+      d. -x509 --> x509 type certificate
+      e. -days 365 --> How many days the certificate is for
+      f. -key private/cakey.pem --> What key to use
+      g. -out cacert.pem --> Where to output the certificate to
+    2. Fill out what it asks you, and for Organization Name, Organization Unit Name, and Common Name, put Skiff101
+II. Create the Certificate Request on your Web Server
+  A. Generate a private key for the web server and a certificate request file
+    1. Log on to your webserver
+    2. "openssl req -newkey rsa:2048 -keyout websrv.key -out websrv.csr"
+      a. openssl --> Use openssl
+      b. req -newkey rsa:2048 --> Request a new key using 2048 key encryption
+      c. -keyout websrv.key --> Where to store the private key
+      d. -out websrv.csr --> Where to store the Certificate request
+    3. Make sure you remember the password you set (mine was "passphrase")
+    4. Fill out all of the boxes with what you answered for the first time you did this, but you don't need the extra attributes
+    5. SCP the csr file to the CA using "scp websrv.csr root@192.168.1.35:/etc/pki/CA" and using the root's password (123456)
+      a. Copy the file "websrv.csr" from the local host to the remote host "192.168.1.35" to the directory "/etc/pki/CA".
+III. Sign the Certificate on the Certificate Authority
+  A. On the CA
+    1. "openssl ca -out websrv.crt -infiles websrv.csr"
+      a. openssl --> use openssl
+      b. ca --> Create a Certificate
+      c. -out websrv.crt --> Output the certification to websrv.crt
+      d. -infiles websrv.csr --> Use websrv.csr as the input for the fields
+    2. Input the passphrase for the CA (passphrase)
+    3. Agree to everything
+    4. SCP the file back using "scp websrv.crt root@192.168.1.41:"
+
+
+
 I. Telnet
   A. How to connect to a server using telnet
     1. Enter Linux server (webserver)
