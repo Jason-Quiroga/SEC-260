@@ -1,5 +1,19 @@
 2/20/21
 
+I. To set up the server to use HTTPS
+  A. On your Centos server, make a copy of the files "websrv.crt" and "websrv.key" and put them in the respective directories (using the syntax "cp [filename] [directory]":
+    1. Web Server Certificate: /etc/pki/tls/certs
+    2. Web Server Private Key: /etc/pki/tls/private
+  B. Install mod-ssl for apache: "yum -y install mod_ssl"
+  C. Update /etc/httpd/conf.d/ssl.conf
+    1. Find SSLCertificateFile and make sure the path and filename match your certificate file (change to /etc/pki/tls/certs/websrv.crt)
+    2. Find SSLCertificateKeyFile and make sure the path and filename match your key file (change to /etc/pki/tls/private/websrv.key)
+    3. Save the file
+  D. Update the firewall to allow port 443 (firewall-cmd --permanenet --add-port=443/tcp)
+  E. Restart httpd
+    1. You may have to insert the passphrase that you created last time to restart it (for me, it was "passphrase").
+  F. Browse to your server using https - you should have success (https)
+
 I. Creating a CA
 ***Make sure openssl is downloaded on both servers
   A. File system prep
